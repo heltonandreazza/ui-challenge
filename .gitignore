@@ -3,3 +3,11 @@ node_modules
 
 //dist files
 dist/
+
+//generated files by compilation
+src/app/**/*.js
+src/app/**/*.ngfactory.ts 
+src/app/**/*.js.map
+src/app/**/*.shim.ts
+src/app/**/*.shim.ngstyle.ts
+src/app/**/*.ngsummary.json
