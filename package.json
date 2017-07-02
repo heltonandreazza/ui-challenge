@@ -9,7 +9,11 @@
         "build": "del-cli dist && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.dev.js --progress --profile --bail && del-cli src/app/**/*.js src/app/**/*.ngfactory.ts src/app/**/*.js.map src/app/**/*.shim.ts src/app/**/*.ngsummary.json src/app/**/*.ngstyle.ts dist/app",
         "build:prod": "del-cli dist && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli src/app/**/*.js src/app/**/*.ngfactory.ts src/app/**/*.js.map src/app/**/*.shim.ts src/app/**/*.ngsummary.json src/app/**/*.ngstyle.ts dist/app",
         "clean": "del-cli dist src/app/**/*.js src/app/**/*.ngfactory.ts src/app/**/*.js.map src/app/**/*.shim.ts src/app/**/*.ngsummary.json src/app/**/*.ngstyle.ts dist/app",
-        "serve": "lite-server"        
+        "serve": "lite-server",
+        "patch": "bump --patch --commit --tag",
+        "minor": "bump --minor --commit --tag",
+        "major": "bump --major --commit --tag",
+        "pre-release": "bump --prerelease --commit --tag"        
     },
     "author": "helton.andreazza",
     "license": "ISC",
@@ -45,6 +49,7 @@
         "lite-server": "^2.3.0",
         "raw-loader": "^0.5.1",
         "typescript": "2.3.4",
+        "version-bump-prompt": "^3.1.2",
         "webpack": "^3.0.0",
         "webpack-dev-server": "^2.5.0",
         "webpack-merge": "^4.1.0"
