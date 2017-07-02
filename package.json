@@ -1,7 +1,7 @@
 {
     "name": "geo-location",
-    "version": "1.0.0",
-    "description": "geo-location",
+    "version": "1.0.1-beta.0",
+    "description": "seed-project",
     "main": "index.js",
     "scripts": {
         "test": "karma start",
