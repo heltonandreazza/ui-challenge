@@ -1,14 +1,13 @@
 {
     "name": "geo-location",
-    "version": "1.0.1-beta.0",
+    "version": "0.0.0",
     "description": "seed-project",
     "main": "index.js",
     "scripts": {
         "test": "karma start",
         "start": "webpack-dev-server --inline --progress --port 8080 --config webpack.config.dev.js",
-        "build": "del-cli dist && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.dev.js --progress --profile --bail && del-cli src/app/**/*.js src/app/**/*.ngfactory.ts src/app/**/*.js.map src/app/**/*.shim.ts src/app/**/*.ngsummary.json src/app/**/*.ngstyle.ts dist/app",
-        "build:prod": "del-cli dist && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli src/app/**/*.js src/app/**/*.ngfactory.ts src/app/**/*.js.map src/app/**/*.shim.ts src/app/**/*.ngsummary.json src/app/**/*.ngstyle.ts dist/app",
-        "clean": "del-cli dist src/app/**/*.js src/app/**/*.ngfactory.ts src/app/**/*.js.map src/app/**/*.shim.ts src/app/**/*.ngsummary.json src/app/**/*.ngstyle.ts dist/app",
+        "build:prod": "del-cli dist && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli src/app/**/*.js src/app/**/*.ngfactory.ts src/app/**/*.js.map src/app/**/*.shim.ts src/app/**/*.ngsummary.json src/app/**/*.ngstyle.ts dist/app dist/src dist/app dist/src dist/node_modules",
+        "clean": "del-cli dist src/app/**/*.js src/app/**/*.ngfactory.ts src/app/**/*.js.map src/app/**/*.shim.ts src/app/**/*.ngsummary.json src/app/**/*.ngstyle.ts",
         "serve": "lite-server",
         "patch": "bump --patch --commit --tag",
         "minor": "bump --minor --commit --tag",
@@ -18,6 +17,7 @@
     "author": "helton.andreazza",
     "license": "ISC",
     "dependencies": {
+        "@agm/core": "^1.0.0-beta.0",
         "@angular/animations": "^4.2.5",
         "@angular/common": "^4.2.5",
         "@angular/compiler": "^4.2.5",
