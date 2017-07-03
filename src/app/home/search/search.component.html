@@ -1,0 +1,31 @@
+<div class="box box-primary">
+    <div class="box-body">
+        <form [formGroup]="searchForm">
+            <div id="user-data">
+                <div class="form-group">
+                    <label for="website">Website</label>
+                    <input type="text" id="website" formControlName="website" class="form-control">
+                    <span 
+                        *ngIf="searchForm.get('website').errors && searchForm.get('website').errors.required && searchForm.get('website').touched"
+                        class="help-block">
+                        Website url is required!
+                    </span>
+                    <span 
+                        *ngIf="searchForm.get('website').errors && searchForm.get('website').errors.website && searchForm.get('website').touched"
+                        class="help-block">
+                        Please enter a valid Website url!
+                    </span>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="button" id="locateWebsite"
+                [disabled]="searchForm.get('website').invalid" 
+                (click)="getWebsiteLocation(searchForm.get('website').value)">Locate website</button>
+            <button class="btn btn-primary" type="button" id="getMyLocation"
+                (click)="getMyLocation()">Get my location</button>
+            <button class="btn btn-primary" type="button" id="removeMyLocation"
+                (click)="removeMyLocation()">Reset my location</button>
+        </form>
+    </div>
+    <!-- /.box-body -->
+</div>
+<!-- /.box -->
