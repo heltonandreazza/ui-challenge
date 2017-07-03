@@ -5,3 +5,7 @@ input.ng-invalid.ng-touched {
 span.help-block {
     color: red
 }
+
+.padding-bottom-5 {
+    padding-bottom: 5px;
+}

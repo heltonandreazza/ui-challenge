@@ -17,13 +17,28 @@
                     </span>
                 </div>
             </div>
-            <button class="btn btn-primary" type="button" id="locateWebsite"
-                [disabled]="searchForm.get('website').invalid" 
-                (click)="getWebsiteLocation(searchForm.get('website').value)">Locate website</button>
-            <button class="btn btn-primary" type="button" id="getMyLocation"
-                (click)="getMyLocation()">Get my location</button>
-            <button class="btn btn-primary" type="button" id="removeMyLocation"
-                (click)="removeMyLocation()">Reset my location</button>
+            <!--BUTTONS-->
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-ls-4 padding-bottom-5">
+                    <button class="btn btn-primary col-xs-12 col-sm-12 col-md-12 col-lg-12" 
+                        type="button" 
+                        id="locateWebsite"
+                        [disabled]="searchForm.get('website').invalid" 
+                        (click)="getWebsiteLocation(searchForm.get('website').value)">Locate website</button>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-ls-4 padding-bottom-5">
+                    <button class="btn btn-primary col-xs-12 col-sm-12 col-md-12 col-lg-12" 
+                        type="button" 
+                        id="getMyLocation"
+                        (click)="getMyLocation()">Get my location</button>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-ls-4 padding-bottom-5">
+                    <button class="btn btn-primary col-xs-12 col-sm-12 col-md-12 col-lg-12" 
+                        type="button" 
+                        id="removeMyLocation"
+                        (click)="removeMyLocation()">Reset my location</button>
+                </div>
+            </div>
         </form>
     </div>
     <!-- /.box-body -->
