@@ -8,6 +8,10 @@ The app uses these technologies:
 * Karma & Jasmine
 * Webpack 2
 
+## Preview
+
+![page_geo_location.jpg](https://bitbucket.org/repo/ekyz7aX/images/999603095-page_geo_location.jpg)
+
 ## Installation and usage
 
 Install the app dependencies:
