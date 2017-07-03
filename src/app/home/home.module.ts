@@ -1,18 +1,31 @@
+import { AgmCoreModule } from "@agm/core";
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { ReactiveFormsModule } from "@angular/forms";
 
-import { SharedModule } from "../shared/shared.module";
 import { HomeComponent } from "./home.component";
 import { HomeService } from "./home.service";
+import { MapComponent } from "./map/map.component";
+import { SearchComponent } from "./search/search.component";
+import { WelcomeComponent } from "./welcome/welcome.component";
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [
+    HomeComponent,
+    MapComponent,
+    SearchComponent,
+    WelcomeComponent
+  ],
   imports: [
+    AgmCoreModule.forRoot({
+      apiKey: "AIzaSyAFO4MOwHtcRfqfV2MNMWphBAq3cCBgnVA"
+    }),    
     CommonModule,
-    SharedModule
+    ReactiveFormsModule
   ],
   providers: [
     HomeService
   ]
 })
-export class HomeModule { }
+export class HomeModule {
+}
