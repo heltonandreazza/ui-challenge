@@ -8,6 +8,49 @@ The app uses these technologies:
 * Karma & Jasmine
 * Webpack 2
 
+## Installation and usage
+
+Install the app dependencies:
+```bash
+$ npm install
+```
+Start the application:
+```bash
+$ npm start
+```
+Run the tests:
+```bash
+$ npm run test
+```
+Build project for production:
+```bash
+$ npm run build:prod
+```
+Start the application in production mode:
+```bash
+$ npm run serve
+```
+Generate major version:
+```bash
+$ npm run major
+```
+Generate minor version:
+```bash
+$ npm run minor
+```
+Generate patch version:
+```bash
+$ npm run patch
+```
+Generate pre-release version:
+```bash
+$ npm run pre-release
+```
+Clean generated files in case some build errors happens:
+```bash
+$ npm run clean
+```
+
 ## Style and structure
 
 This app follows [John Papa's AngularJS style guide](https://github.com/johnpapa/angular-styleguide),
