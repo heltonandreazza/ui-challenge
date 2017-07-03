@@ -62,4 +62,4 @@ which is the style guide recommended by the AngularJS core team.
 
 ## Contributors  
 
-**@author:** 'Helton Andreazza*< [helton.prg@gmail.com](mailto:helton.prg@gmail.com) >*'
+Helton Andreazza*< [helton.prg@gmail.com](mailto:helton.prg@gmail.com) >*'
