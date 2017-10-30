@@ -17,6 +17,7 @@ describe('MapComponent', () => {
   let dashboardService: HomeService;
   let compiled: any;
 
+  //service fake para subs chamada original para API
   class FakeHomeService {
     myLocationChanged = new Subject<any>();
     websiteLocationChanged = new Subject<any>();
@@ -32,7 +33,11 @@ describe('MapComponent', () => {
       return Observable.of(fakeWebSiteLocationG1).subscribe(location => this.websiteLocationChanged.next(location));
     }
 
+    // method mock no lugar do original para não ter chamada direta para a API
     getMyLocation(websiteUrl) {
+      // para retornar fake diretamente sem Subject(myLocationChanged) segue abaixo
+      // return Observable.of(fakeMyLocation)
+      
       return Observable.of(fakeMyLocation)
         .subscribe(location => this.myLocationChanged.next(location));
     }
@@ -72,13 +77,13 @@ describe('MapComponent', () => {
     expect(component.websiteLocation).toEqual(fakeWebSiteLocationG1);
   })
 
-
+  //exemplo 
   it('service \'Get my location\' should retrieves the user location to the map component by subscription', () => {
-    fixture.detectChanges();
-    let homeService = fixture.debugElement.injector.get(HomeService);
-    homeService.getMyLocation();
-    fixture.detectChanges();
-    expect(component.myLocation).toEqual(fakeMyLocation);
+    fixture.detectChanges(); //inicializo constructor do componente
+    let homeService = fixture.debugElement.injector.get(HomeService); // injeto service fake(fakeHomeService que retorna mock), veja config de provider la em cima pra substituir o original pelo fake
+    homeService.getMyLocation(); // chamo o service back-end pra retornar a mock (fakeHomeService)
+    fixture.detectChanges(); // renderizo o componente novamente com os novos dados
+    expect(component.myLocation).toEqual(fakeMyLocation); // acesso a propriedade myLocation do componente e vejo que foi carregada pelo service fake. Eu carrego ela no component la no subscribe( veja la o this.homeService.myLocationChanged )
   })
 
 
