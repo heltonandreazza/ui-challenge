@@ -18,7 +18,7 @@ import { WelcomeComponent } from "./welcome/welcome.component";
   ],
   imports: [
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyAFO4MOwHtcRfqfV2MNMWphBAq3cCBgnVA"
+      apiKey: "AIzaSyD2WoWHsQu8KIfFMvmqzgmFi4rtVlHe04U"
     }),    
     CommonModule,
     ReactiveFormsModule
